@@ -25,7 +25,7 @@ for row in csv_file:
         low = int(row[5])
         converted_date = datetime.strptime(row[2], "%Y-%m-%d")
     except ValueError:
-        print(f"missing data for {converted_date}")
+        print("missing data for {converted_date}")
     else:
         highs.append(high)
         lows.append(low)
