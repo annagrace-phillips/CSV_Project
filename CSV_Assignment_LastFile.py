@@ -49,5 +49,17 @@ plt.tick_params(axis="both", which= 'major', labelsize=12)
 
 fig2, a = plt.subplots(2)
 
+a[0].plot(dates, highs, c="red")
+a[0].plot(dates, lows, c="dates")
+a[0].fill_between(dates,highs,lows, facecolor="blue", alpha=0.1)
+
+
+for ax in a.flat:
+    ax.label_outer()
+
+a[1].plot(dates, highs, c="red")
+a[1].plot(dates, lows, c="blue")
+a[1].fill_between(dates,highs,lows, facecolor="blue", alpha=0.1)
+
 
 plt.show()
